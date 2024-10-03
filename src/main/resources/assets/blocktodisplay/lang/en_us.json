@@ -1,0 +1,5 @@
+{
+  "blocktodisplay.error.unsupported_block": "[BlockToDisplay] %s is unsupported",
+  "blocktodisplay.toggle.on": "[BlockToDisplay] Toggled on!",
+  "blocktodisplay.toggle.off": "[BlockToDisplay] Toggled off!"
+}

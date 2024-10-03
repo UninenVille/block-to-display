@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "blocktodisplay",
+	"version": "${version}",
+	"name": "Block To Display",
+	"description": "Turn blocks into block displays either by breaking or commands",
+	"authors": [
+		"UninenVille"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/project/block-to-display",
+		"sources": "https://github.com/UninenVille/block-to-display"
+	},
+	"license": "MIT",
+	"icon": "assets/blocktodisplay/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"uninenville.blocktodisplay.BlockToDisplay"
+		]
+	},
+	"mixins": [
+		"blocktodisplay.mixins.json"
+	],
+	"depends": {
+		"minecraft": ">=1.21.1",
+		"fabricloader": "*",
+		"fabric-api": "*"
+	},
+	"suggests": {
+	}
+}
