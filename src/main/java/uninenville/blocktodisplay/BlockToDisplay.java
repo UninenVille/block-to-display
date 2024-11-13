@@ -99,7 +99,7 @@ public class BlockToDisplay implements ModInitializer {
 				return CLIENT.getNetworkHandler().sendCommand(command);
 			}
 		} else {
-			player.sendMessage(Text.translatable("blocktodisplay.error.unsupported_block", state.getBlock().getName()));
+			player.sendMessage(Text.translatable("blocktodisplay.error.unsupported_block", state.getBlock().getName()), false);
 		}
 
 		return false;

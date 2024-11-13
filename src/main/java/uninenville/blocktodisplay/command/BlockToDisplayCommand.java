@@ -44,7 +44,7 @@ public class BlockToDisplayCommand {
 
         boolean enabled = BlockToDisplay.changeBlockToDisplayOnBreak;
         BlockToDisplay.changeBlockToDisplayOnBreak = !enabled;
-        CLIENT.player.sendMessage(Text.translatable("blocktodisplay.toggle." + (!enabled ? "on" : "off")));
+        CLIENT.player.sendMessage(Text.translatable("blocktodisplay.toggle." + (!enabled ? "on" : "off")), false);
 
         return 1;
     }
@@ -61,8 +61,8 @@ public class BlockToDisplayCommand {
         if (box.minY < world.getBottomY()) {
             box = box.withMinY(world.getBottomY());
         }
-        if (box.maxY > world.getTopY()) {
-            box = box.withMaxY(world.getTopY());
+        if (box.maxY > world.getBottomY() + world.getHeight()) {
+            box = box.withMaxY(world.getBottomY() + world.getHeight());
         }
 
         BlockPos.stream(box).forEach(pos -> {
