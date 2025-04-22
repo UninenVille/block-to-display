@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "blocktodisplay",
+	"id": "block-to-display",
 	"version": "${version}",
 	"name": "Block To Display",
 	"description": "Turn blocks into block displays either by breaking or commands",

@@ -52,6 +52,8 @@ public class BlockToDisplay implements ModInitializer {
 		Blocks.DECORATED_POT,
 		Blocks.END_GATEWAY,
 		Blocks.END_PORTAL,
+		Blocks.WATER,
+		Blocks.LAVA,
 		Blocks.SKELETON_SKULL,
 		Blocks.SKELETON_WALL_SKULL,
 		Blocks.WITHER_SKELETON_SKULL,
