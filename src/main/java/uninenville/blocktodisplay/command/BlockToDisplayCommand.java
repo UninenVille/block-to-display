@@ -72,7 +72,7 @@ public class BlockToDisplayCommand {
 
             if (state.isOf(block)) {
                 if (BlockToDisplay.tryCreateBlockDisplay(CLIENT.player, pos, state) && CLIENT.getNetworkHandler() != null) {
-                    CLIENT.getNetworkHandler().sendCommand(String.format("setblock %d %d %d air", pos.getX(), pos.getY(), pos.getZ()));
+                    CLIENT.getNetworkHandler().sendChatCommand(String.format("setblock %d %d %d air", pos.getX(), pos.getY(), pos.getZ()));
                 }
             }
         });

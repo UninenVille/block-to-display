@@ -98,7 +98,8 @@ public class BlockToDisplay implements ModInitializer {
 			Vec3d center = pos.toCenterPos();
 			String command = String.format("summon block_display %s %s %s %s", center.getX(), center.getY(), center.getZ(), nbt);
 			if (CLIENT.getNetworkHandler() != null) {
-				return CLIENT.getNetworkHandler().sendCommand(command);
+				CLIENT.getNetworkHandler().sendChatCommand(command);
+				return true;
 			}
 		} else {
 			player.sendMessage(Text.translatable("blocktodisplay.error.unsupported_block", state.getBlock().getName()), false);
