@@ -32,7 +32,7 @@ public class BlockToDisplayCommand {
                 .then(literal("replacenear")
                     .then(argument("block", BlockStateArgumentType.blockState(registryAccess))
                         .then(argument("radius", IntegerArgumentType.integer(1))
-                            .executes(BlockToDisplayCommand::executes)
+                            .executes(BlockToDisplayCommand::replaceNearby)
                         )
                     )
                 )
@@ -49,10 +49,10 @@ public class BlockToDisplayCommand {
         return 1;
     }
 
-    private static int executes(CommandContext<FabricClientCommandSource> context) {
+    private static int replaceNearby(CommandContext<FabricClientCommandSource> context) {
         if (CLIENT.player == null) return 0;
 
-        World world = CLIENT.player.getWorld();
+        World world = CLIENT.player.getEntityWorld();
         Vec3d center = CLIENT.player.getBlockPos().toCenterPos();
         int radius = IntegerArgumentType.getInteger(context, "radius");
         Block block = context.getArgument("block", BlockStateArgument.class).getBlockState().getBlock();
