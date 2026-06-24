@@ -68,7 +68,7 @@ public class BlockToDisplay implements ModInitializer {
                 .encodeStart(NbtOps.INSTANCE, DEFAULT_TRANSFORMATION)
                 .ifSuccess(transformations -> nbt.put("transformation", transformations));
 
-            Vec3 center = pos.getCenter();
+            Vec3 center = Vec3.atCenterOf(pos);
             String command = String.format("summon block_display %s %s %s %s", center.x(), center.y(), center.z(), nbt);
             if (Minecraft.getInstance().getConnection() != null) {
                 Minecraft.getInstance().getConnection().sendCommand(command);
