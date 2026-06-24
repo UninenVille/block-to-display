@@ -55,7 +55,7 @@ public class BlockToDisplayCommand {
         if (player == null) return 0;
 
         Level level = player.level();
-        Vec3 center = player.getOnPos().getCenter();
+        Vec3 center = Vec3.atCenterOf(player.getOnPos());
         int radius = IntegerArgumentType.getInteger(context, "radius");
         Block block = context.getArgument("block", BlockInput.class).getState().getBlock();
 
