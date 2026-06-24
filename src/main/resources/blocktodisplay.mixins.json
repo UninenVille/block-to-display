@@ -1,9 +1,0 @@
-{
-	"required": true,
-	"package": "uninenville.blocktodisplay.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
-	"injectors": {
-		"defaultRequire": 1
-	}
-}

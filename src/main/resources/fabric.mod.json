@@ -1,32 +1,28 @@
 {
-	"schemaVersion": 1,
-	"id": "block-to-display",
-	"version": "${version}",
-	"name": "Block To Display",
-	"description": "Turn blocks into block displays either by breaking or commands",
-	"authors": [
-		"UninenVille"
-	],
-	"contact": {
-		"homepage": "https://modrinth.com/project/block-to-display",
-		"sources": "https://github.com/UninenVille/block-to-display"
-	},
-	"license": "MIT",
-	"icon": "assets/blocktodisplay/icon.png",
-	"environment": "client",
-	"entrypoints": {
-		"main": [
-			"uninenville.blocktodisplay.BlockToDisplay"
-		]
-	},
-	"mixins": [
-		"blocktodisplay.mixins.json"
-	],
-	"depends": {
-		"minecraft": ">=1.21.9",
-		"fabricloader": "*",
-		"fabric-api": "*"
-	},
-	"suggests": {
-	}
+  "schemaVersion": 1,
+  "id": "block-to-display",
+  "version": "${version}",
+  "name": "Block To Display",
+  "description": "Turn blocks into block displays either by breaking or commands",
+  "authors": [
+    "UninenVille"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/project/block-to-display",
+    "sources": "https://github.com/UninenVille/block-to-display",
+    "issues": "https://github.com/UninenVille/block-to-display/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/block-to-display/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "xyz.uninenville.blocktodisplay.BlockToDisplay"
+    ]
+  },
+  "depends": {
+    "minecraft": ">=26.1",
+    "fabricloader": "*",
+    "fabric-api": "*"
+  }
 }
